@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Movie Search API</title>
+</head>
+<style>
+	html {
+		box-sizing: border-box;
+	}
+
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		margin: 0;
+		font-family: sans-serif;
+		font-weight: 200;
+		background: no-repeat linear-gradient(to bottom left, #EF5B5B 30%, #1B9AAA);
+		min-height: 100vh;
+	}
+
+	.movie-wrapper {
+		display: flex;
+		margin: 20px auto;
+		max-width: 70%;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.display2 {
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		width: 95%;
+		background: rgba(255, 255, 255, 0.4);
+		padding: 20px;
+		box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 0.4);
+		flex-basis: 500px;
+	}
+
+	.list-group-item.movieli {
+		background: transparent;
+		border: none;
+	}
+
+	.list-group-item.movieli:last-child {
+		margin-bottom: 20px;
+	}
+
+	.movie-plot h3 {
+		margin: 10px;
+
+	}
+
+	.movie-plot a {
+		margin: 0 20px;
+	}
+
+	.well {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.movies-list {
+		width: 100%;
+		text-align: left;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+<body>
+	<div class="movie-wrapper">
+		<div class="display2">
+			<!-- MOVIE DATA TO BE RENDERED HERE  -->
+		</div>
+	</div>
+
+	<script src="./js/main.js"></script>
+	<script>
+		//On page load, run getMovie Function
+		movieModule.getMovie();
+	</script>
+</body>
+
+</html>

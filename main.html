@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Movie Search API</title>
+</head>
+<style>
+	html {
+		box-sizing: border-box;
+	}
+
+	*,
+	*:before,
+	*:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		margin: 0;
+		font-family: sans-serif;
+		font-weight: 200;
+		background: no-repeat linear-gradient(to bottom left, #EF5B5B 30%, #1B9AAA);
+		min-height: 100vh;
+	}
+
+	.wrapper {
+		display: flex;
+		margin: 20px auto;
+		max-width: 70%;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.2);
+		padding: 20px;
+	}
+
+	form input {
+		margin: 10px 0;
+		padding: 10px 10px 5px 10px;
+		width: 100%;
+		border: none;
+		outline: none;
+		font-weight: 100;
+		transition: all .5s;
+	}
+
+	form input[name="search"] {
+		font-size: 2em;
+		border-radius: 5px;
+		margin-bottom: 10px;
+		border-bottom: 3px solid #fff;
+	}
+
+	form input[name="search"]:focus {
+		border-bottom: 3px solid #1B9AAA;
+	}
+
+	form input[name="submit"] {
+		padding: 10px;
+		width: 50%;
+		background: #1B9AAA;
+		color: white;
+		font-size: 1.4em;
+		border-radius: 5px;
+		font-weight: 120;
+	}
+
+	.display {
+		display: none;
+		min-height: 100vh;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		width: 90%;
+
+		background: rgba(255, 255, 255, 0.4);
+		padding: 10px;
+		box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.4)
+	}
+
+	.display.active {
+		display: flex;
+	}
+
+	.card {
+		flex-basis: 300px;
+		margin: 10px;
+		text-align: center;
+		font-family: sans-serif;
+		box-shadow: 2px 2px 3px 5px rgba(0, 0, 0, 0.2)
+	}
+
+	.movieImg img {
+		height: 390px;
+		padding: 10px;
+	}
+
+	.alert {
+		transition: all .5s;
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+<body>
+	<div class="wrapper">
+		<form class="movie-form">
+			<input type="text" name="search" placeholder="Enter Movie Title..." />
+			<input type="submit" name="submit" />
+		</form>
+	</div>
+	<!-- Display Start -->
+	<div class="display"></div>
+
+	<script src=" ./js/main.js "></script>
+</body>
+
+</html>

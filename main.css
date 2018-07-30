@@ -1,0 +1,87 @@
+
+
+html {
+	box-sizing:border-box;
+}
+*,*:before,*:after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	font-family: sans-serif;
+	font-weight: 200;
+	background: no-repeat linear-gradient(to bottom left, #EF5B5B 30%, #1B9AAA);
+	min-height: 100vh;
+}
+.wrapper {
+	display: flex;
+	margin: 20px auto;
+	max-width: 70%;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+form {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+	background: rgba(0,0,0,0.2);
+	padding: 20px;
+}
+form input {
+	margin: 10px 0;
+	padding:10px 10px 5px 10px;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-weight: 100;
+	transition: all .5s;
+}
+form input[name="search"] {
+	font-size: 2em;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	border-bottom: 3px solid #fff;
+}
+form input[name="search"]:focus {
+	border-bottom: 3px solid #1B9AAA;
+}
+form input[name="submit"] {
+	padding: 10px;
+	width: 50%;
+	background: #1B9AAA;
+	color: white;
+	font-size: 1.4em;
+	border-radius: 5px;
+	font-weight:120;
+}
+.display {
+	display: flex;
+	margin-top: 10px;
+	width: 100%;
+	height:100vh;
+	background: rgba(255,255,255,0.4);
+	padding:10px;
+	box-shadow: 2px 2px 5px 10px rgba(0,0,0,0.4)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
