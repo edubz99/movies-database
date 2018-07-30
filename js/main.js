@@ -33,7 +33,7 @@ const movieModule = (() => {
 				displayMessage('Submitted Successfully!', 'success');
 			}
 			//Call fetch function (FETCH API)
-			this.fetchData(searchValue);
+			this.fetchData(searcshValue);
 		},
 		//FETCH API
 		fetchData: async function fetchData (search) {
