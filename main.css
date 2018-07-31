@@ -64,7 +64,7 @@ form input[name="submit"] {
   padding: 10px;
   box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 0.4);
 }
-.alert-success {
+.alert-sizing {
   padding: 1em 0 !important;
   border-radius: 5px;
 }
