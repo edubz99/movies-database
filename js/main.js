@@ -7,16 +7,17 @@ const movieModule = (() => {
 	/////GET SEARCH RESULTS FROM SESSION STORAGE
 	const searchResults = JSON.parse(sessionStorage.getItem('searchResults')) || [];
 	let movies;
-	
+	const alert = document.querySelector('#alert');
+
 	function displayMessage(msg, alertClass) {
-		const div = document.createElement('div');
-		div.classList.add('alert');
-		div.classList.add(`alert-${alertClass}`);
-		const errorMsg = `${msg}`;
-		div.append(errorMsg);
-		document.querySelector('.movie-form').prepend(div);
+		alert.classList.add(`alert-${alertClass}`,'show-alert', 'alert-sizing');
+		alert.textContent = msg;
 		//Set timeout to remove alert class after 2 seconds
-		setTimeout (() => document.querySelector('.alert').remove(),2000);
+		setTimeout (() => {
+			alert.classList.add('hide-alert');
+			alert.classList.remove(`alert-${alertClass}`);
+			alert.textContent = '';
+		},2000);
 	}
 	//PUBLIC NAMESPACE
 	return {
@@ -33,7 +34,7 @@ const movieModule = (() => {
 				displayMessage('Submitted Successfully!', 'success');
 			}
 			//Call fetch function (FETCH API)
-			this.fetchData(searcshValue);
+			this.fetchData(searchValue);
 		},
 		//FETCH API
 		fetchData: async function fetchData (search) {
@@ -46,7 +47,6 @@ const movieModule = (() => {
 			//SAVE SEARCH RESULTS TO SESSION STORAGE
 			sessionStorage.setItem('searchResults', JSON.stringify(movies));
 			const html = movies.map(movie => {
-				console.log(movie);
 				return this.renderResults(movie);  
 			}).join('');
 			//Unhide display
@@ -92,7 +92,6 @@ const movieModule = (() => {
 			const dataRequest = await fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=7aecda84`);
 			const dataResponse = await dataRequest.json();
 			const data = dataResponse;
-				console.log(data);
 				movieWrapper.innerHTML = `	
 					<div class="row movie-card">
 					<div class="col-md-6">
